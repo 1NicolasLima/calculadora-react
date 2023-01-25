@@ -1,0 +1,5 @@
+Lógica da Calculadora:
+
+1- Tudo que eu digitar tem que aparecer no Display;
+2- Sempre que eu usar um operador e apertar em um numero ele vai apagar o numero o display;
+3- E dependendo do operacional quando eu apertar no = vai me mostrar no resultado;
