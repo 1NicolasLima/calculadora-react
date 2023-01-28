@@ -21,6 +21,13 @@ export default class Calculator extends Component {
         this.clearMemory = this.clearMemory.bind(this)
         this.setOperation = this.setOperation.bind(this)
         this.addDigit = this.addDigit.bind(this)
+        this.setDisplayLimit = this.setDisplayLimit.bind(this)
+    }
+
+    setDisplayLimit() {
+        if (this.state.displayValue.length > 11) {
+            this.setState({ displayValue: 'Limite' })
+        }
     }
 
     clearMemory() {
@@ -35,14 +42,29 @@ export default class Calculator extends Component {
             const currentOperation = this.state.operation
 
             const values = [...this.state.values]
-            try {
-                values[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`)
-            } catch (e) {
-                values[0] = this.state.values[0]
+            let result;
+            switch (currentOperation) {
+                case "+":
+                    result = values[0] + values[1];
+                    break;
+                case "-":
+                    result = values[0] - values[1];
+                    break;
+                case "*":
+                    result = values[0] * values[1];
+                    break;
+                case "/":
+                    result = values[0] / values[1];
+                    break;
+                case "=":
+                    result = values[0];
+                    break;
+                default:
+                    break;
             }
 
-            values[1] = 0
-
+            values[0] = result;
+            values[1] = 0;
             this.setState({
                 displayValue: values[0],
                 operation: equals ? null : operation,
@@ -74,6 +96,7 @@ export default class Calculator extends Component {
     }
 
     render() {
+        this.setDisplayLimit()
         return (
             <div className="calculator">
                 <Display value={this.state.displayValue}></Display>
