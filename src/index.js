@@ -9,6 +9,9 @@ root.render(
   <div>
     <h1>Calculadora</h1>
     <Calculator />
+    <div>
+        <img src="../img/Calculadora-inspiracao.png" alt="" />
+    </div>
   </div>
 );
 
