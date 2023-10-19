@@ -15,7 +15,9 @@
 .containerCalc{
     display: flex;
     width: 1000px;
-    border: 1px solid;
     justify-content: center;
     align-items: center;
+}
+.botaoInexistente{
+    grid-column: span 2;
 }

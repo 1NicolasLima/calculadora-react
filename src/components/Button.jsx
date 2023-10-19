@@ -9,6 +9,8 @@ export default props => {
     classes += props.operation ? 'operation' : ''
     classes += props.double ? 'double' : ''
     classes += props.triple ? 'triple' : ''
+    classes += props.botaoResultado ? 'botaoResultado' : ''
+    classes += props.botaoInexistete ? 'botaoInexistete' : ''
 
     return (
         <button onClick={e => props.click && props.click(props.label)}

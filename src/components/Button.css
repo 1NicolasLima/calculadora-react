@@ -4,7 +4,7 @@
 }
 
 .button {
-    font-size: 1.4em;
+    font-size: 2.4em;
     background-color: var(--bg-button);
     border: none;
     border-right: var(--border-button);
@@ -12,7 +12,7 @@
 }
 
 .button:active {
-    background-color: #ccc;
+    background-color: #ec54ec;
 }
 
 .button.double {
@@ -20,12 +20,21 @@
 }
 
 .button.triple {
-    grid-column: span 3;
+    grid-column: span 4;
 }
 
 .button.operation {
-    background-color: #fa8231;
+    background-color: #5c0606;
     color: #fff;
+}
+
+.botaoResultado{
+    grid-column: span 2;
+    background-color: #5c0606;
+}
+
+.botaoInexistete{
+    grid-column: span 2;
 }
 
 .button.operation:active {
@@ -34,9 +43,8 @@
 
 .buttons{
     display: grid;
-    width: 333px;
+    width: 401px;
     height: 333px;
-    margin: 34px;
-    margin-top: 93px;
+    margin-top: 99px;
     border: 1px solid gray;
 }
