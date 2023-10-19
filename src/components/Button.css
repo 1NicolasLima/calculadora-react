@@ -31,3 +31,12 @@
 .button.operation:active {
     background-color: #fa8231cc;
 }
+
+.buttons{
+    display: grid;
+    width: 333px;
+    height: 333px;
+    margin: 34px;
+    margin-top: 93px;
+    border: 1px solid gray;
+}
